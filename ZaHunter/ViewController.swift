@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var mapview: MKMapView!
+    let locationmanager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        locationmanager.requestWhenInUseAuthorization()
+        mapview.showsUserLocation = true
     }
-
-
+    
 }
-
