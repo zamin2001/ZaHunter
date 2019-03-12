@@ -13,17 +13,20 @@ import CoreLocation
 //Delegate means to report back to the view controller, in this case the CLLocation is reporting back or delegating to the ViewController/
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate{
     
     @IBOutlet weak var mapview: MKMapView!
+    
     let locationmanager = CLLocationManager()
     var region = MKCoordinateRegion()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationmanager.requestWhenInUseAuthorization()
         mapview.showsUserLocation = true
         locationmanager.delegate = self
         locationmanager.startUpdatingLocation()
+        mapview.delegate = self
         //Delegate allows access to new functions...usch as updating loction//
         
     }
@@ -38,5 +41,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapview.setRegion(region, animated:true)
     }
     
-    
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "pizza"
+        request.region = region
+        let search = MKLocalSearch(request:request)
+        search.start { (response,error) in
+            if let  response = response {
+                for mapItem in response.mapItems {
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = mapItem.placemark.coordinate
+                    annotation.title = mapItem.name
+                    self.mapview.addAnnotation(annotation)
+                }
+            }
+        }
+        
+    }
 }
+
+
+
