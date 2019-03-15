@@ -67,20 +67,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uaU-08-Pgl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-DW-Qzi">
+                                <rect key="frame" x="87.5" y="100" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6bM-34-Lko"/>
+                                    <constraint firstAttribute="height" constant="50" id="9DL-U6-8dR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-Ck-Gbb">
+                                <rect key="frame" x="87.5" y="199" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="DVr-7R-0kV"/>
+                                    <constraint firstAttribute="width" constant="200" id="rVG-yA-1e6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-iO-py2">
+                                <rect key="frame" x="87.5" y="463" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WGm-mD-WYu"/>
+                                    <constraint firstAttribute="width" constant="200" id="boD-Ex-hg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uaU-08-Pgl" firstAttribute="leading" secondItem="9Re-Pw-nLy" secondAttribute="leading" id="FPy-6w-JuV"/>
-                            <constraint firstItem="uaU-08-Pgl" firstAttribute="trailing" secondItem="9Re-Pw-nLy" secondAttribute="trailing" id="Kjf-GF-kgx"/>
-                            <constraint firstItem="uaU-08-Pgl" firstAttribute="top" secondItem="d7H-Tp-Vcf" secondAttribute="top" id="apz-Lp-Zdb"/>
-                            <constraint firstItem="uaU-08-Pgl" firstAttribute="bottom" secondItem="9Re-Pw-nLy" secondAttribute="bottom" id="hAU-cj-I2I"/>
+                            <constraint firstItem="8fU-Ck-Gbb" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="0Ae-iS-VUc"/>
+                            <constraint firstItem="Dgb-DW-Qzi" firstAttribute="top" secondItem="9Re-Pw-nLy" secondAttribute="top" constant="36" id="2Uw-5S-GTu"/>
+                            <constraint firstItem="b3Z-iO-py2" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="34h-1G-eFs"/>
+                            <constraint firstItem="Dgb-DW-Qzi" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="AOl-NL-4hG"/>
+                            <constraint firstItem="8fU-Ck-Gbb" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="JbJ-IU-Yax"/>
+                            <constraint firstItem="b3Z-iO-py2" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="T8d-qj-pLg"/>
+                            <constraint firstItem="8fU-Ck-Gbb" firstAttribute="top" secondItem="Dgb-DW-Qzi" secondAttribute="bottom" constant="49" id="bLd-o6-0SW"/>
+                            <constraint firstItem="9Re-Pw-nLy" firstAttribute="bottom" secondItem="b3Z-iO-py2" secondAttribute="bottom" constant="154" id="gPn-hb-1ON"/>
+                            <constraint firstItem="Dgb-DW-Qzi" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="nuX-l4-DVv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Re-Pw-nLy"/>
                     </view>
                     <navigationItem key="navigationItem" id="5cA-zg-ogc"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="8fU-Ck-Gbb" id="6pe-c4-K3W"/>
+                        <outlet property="nameLabel" destination="Dgb-DW-Qzi" id="fcF-39-cff"/>
+                        <outlet property="phoneLabel" destination="b3Z-iO-py2" id="AGn-VC-EGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-J5-tvQ" sceneMemberID="firstResponder"/>
             </objects>
