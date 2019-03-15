@@ -87,8 +87,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-iO-py2">
-                                <rect key="frame" x="87.5" y="463" width="200" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I9-hO-Rv8">
+                                <rect key="frame" x="149" y="565" width="77" height="30"/>
+                                <state key="normal" title="Direction"/>
+                                <connections>
+                                    <action selector="onDirectionsButtonTapped:" destination="6Bw-rZ-8gA" eventType="touchUpInside" id="Xia-UY-D5E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-iO-py2">
+                                <rect key="frame" x="87" y="465" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WGm-mD-WYu"/>
                                     <constraint firstAttribute="width" constant="200" id="boD-Ex-hg3"/>
@@ -104,7 +111,10 @@
                             <constraint firstItem="Dgb-DW-Qzi" firstAttribute="top" secondItem="9Re-Pw-nLy" secondAttribute="top" constant="36" id="2Uw-5S-GTu"/>
                             <constraint firstItem="b3Z-iO-py2" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="34h-1G-eFs"/>
                             <constraint firstItem="Dgb-DW-Qzi" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="AOl-NL-4hG"/>
+                            <constraint firstItem="1I9-hO-Rv8" firstAttribute="top" secondItem="b3Z-iO-py2" secondAttribute="bottom" constant="51" id="FEJ-VY-ugw"/>
+                            <constraint firstItem="1I9-hO-Rv8" firstAttribute="leading" secondItem="9Re-Pw-nLy" secondAttribute="leading" constant="157" id="H0y-Kc-a9h"/>
                             <constraint firstItem="8fU-Ck-Gbb" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="JbJ-IU-Yax"/>
+                            <constraint firstItem="1I9-hO-Rv8" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="PAc-O3-oOl"/>
                             <constraint firstItem="b3Z-iO-py2" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="T8d-qj-pLg"/>
                             <constraint firstItem="8fU-Ck-Gbb" firstAttribute="top" secondItem="Dgb-DW-Qzi" secondAttribute="bottom" constant="49" id="bLd-o6-0SW"/>
                             <constraint firstItem="9Re-Pw-nLy" firstAttribute="bottom" secondItem="b3Z-iO-py2" secondAttribute="bottom" constant="154" id="gPn-hb-1ON"/>
@@ -121,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-J5-tvQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="128"/>
+            <point key="canvasLocation" x="1720.8" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>

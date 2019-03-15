@@ -15,6 +15,8 @@ class LocationDetailsViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+   
+    
     var selectedMapItem = MKMapItem()
     
     
@@ -35,15 +37,9 @@ class LocationDetailsViewController: UIViewController {
         phoneLabel.text = selectedMapItem.phoneNumber
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onDirectionsButtonTapped(_ sender: Any) {
+        
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        MKMapItem.openMaps(with:[selectedMapItem], launchOptions: launchOptions)
     }
-    */
-
 }
