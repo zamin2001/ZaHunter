@@ -87,15 +87,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I9-hO-Rv8">
-                                <rect key="frame" x="149" y="565" width="77" height="30"/>
-                                <state key="normal" title="Direction"/>
-                                <connections>
-                                    <action selector="onDirectionsButtonTapped:" destination="6Bw-rZ-8gA" eventType="touchUpInside" id="Xia-UY-D5E"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-iO-py2">
-                                <rect key="frame" x="87" y="465" width="200" height="50"/>
+                                <rect key="frame" x="87" y="399" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WGm-mD-WYu"/>
                                     <constraint firstAttribute="width" constant="200" id="boD-Ex-hg3"/>
@@ -104,6 +97,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I9-hO-Rv8">
+                                <rect key="frame" x="149" y="486" width="77" height="30"/>
+                                <state key="normal" title="Direction"/>
+                                <connections>
+                                    <action selector="onDirectionsButtonTapped:" destination="6Bw-rZ-8gA" eventType="touchUpInside" id="Xia-UY-D5E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaZ-U9-RY7">
+                                <rect key="frame" x="149" y="553" width="61" height="30"/>
+                                <state key="normal" title="Website"/>
+                                <connections>
+                                    <action selector="onWebsiteButtonTapped:" destination="6Bw-rZ-8gA" eventType="touchUpInside" id="dGh-2X-T4q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -115,10 +122,13 @@
                             <constraint firstItem="1I9-hO-Rv8" firstAttribute="leading" secondItem="9Re-Pw-nLy" secondAttribute="leading" constant="157" id="H0y-Kc-a9h"/>
                             <constraint firstItem="8fU-Ck-Gbb" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="JbJ-IU-Yax"/>
                             <constraint firstItem="1I9-hO-Rv8" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="PAc-O3-oOl"/>
+                            <constraint firstItem="WaZ-U9-RY7" firstAttribute="top" secondItem="1I9-hO-Rv8" secondAttribute="bottom" constant="28" id="QEH-hA-39U"/>
                             <constraint firstItem="b3Z-iO-py2" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="T8d-qj-pLg"/>
                             <constraint firstItem="8fU-Ck-Gbb" firstAttribute="top" secondItem="Dgb-DW-Qzi" secondAttribute="bottom" constant="49" id="bLd-o6-0SW"/>
+                            <constraint firstItem="WaZ-U9-RY7" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="fMf-dI-wFv"/>
                             <constraint firstItem="9Re-Pw-nLy" firstAttribute="bottom" secondItem="b3Z-iO-py2" secondAttribute="bottom" constant="154" id="gPn-hb-1ON"/>
                             <constraint firstItem="Dgb-DW-Qzi" firstAttribute="centerX" secondItem="d7H-Tp-Vcf" secondAttribute="centerX" id="nuX-l4-DVv"/>
+                            <constraint firstItem="WaZ-U9-RY7" firstAttribute="leading" secondItem="9Re-Pw-nLy" secondAttribute="leading" constant="165" id="t9F-jE-DpY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Re-Pw-nLy"/>
                     </view>
